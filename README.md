@@ -1,6 +1,6 @@
 # Odoo Prueba de trabajo
 
-Este proyecto contiene la configuración completa de Odoo 16 en Docker junto con los módulos desarrollados como parte del examen práctico.  
+Este proyecto contiene la configuración completa de Odoo 16 en Docker junto con los módulos desarrollados como parte de esta prueba práctica laboral.  
 El entorno está preparado para que pueda ejecutarse directamente, sin necesidad de instalaciones adicionales.
 
 ---
