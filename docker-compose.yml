@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:14
+    container_name: odoo_exam-db-1
+    environment:
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_DB=postgres
+    volumes:
+      - odoo-db-data:/var/lib/postgresql/data
+
+  odoo:
+    build: .
+    container_name: odoo_exam-odoo-1
+    depends_on:
+      - db
+    ports:
+      - "8069:8069"
+    environment:
+      - HOST=db
+      - USER=odoo
+      - PASSWORD=odoo
+      - ODOO_RC=/etc/odoo/odoo.conf
+    volumes:
+      - ./odoo-config:/etc/odoo
+      - ./addons:/mnt/extra-addons
+      - odoo-web-data:/var/lib/odoo
+
+volumes:
+  odoo-db-data:
+  odoo-web-data:

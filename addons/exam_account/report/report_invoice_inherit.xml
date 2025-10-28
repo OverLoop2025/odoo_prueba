@@ -1,0 +1,20 @@
+<odoo>
+  <template id="report_invoice_document_exam_inherit" inherit_id="account.report_invoice_document">
+    <xpath expr="//div[contains(@class,'page')]" position="inside">
+      <div class="row mt8 mb8">
+        <div class="col-6">
+          <p><strong>Serie:</strong> <span t-esc="o.x_series or ''"/></p>
+          <p><strong>Correlativo:</strong> <span t-esc="o.x_correlative or ''"/></p>
+          <p><strong>Canal de ventas:</strong> <span t-esc="o.x_sale_channel_id and o.x_sale_channel_id.name or ''"/></p>
+          <p><strong>Fecha de emisión:</strong> <span t-esc="o.x_issue_datetime"/></p>
+          <p><strong>Total Cantidades:</strong> <span t-esc="o.x_total_qty"/></p>
+        </div>
+        <div class="col-6 text-end">
+          <t t-if="o.x_qr_invoice">
+            <img t-att-src="'data:image/png;base64,%s' % (o.x_qr_invoice.decode() if isinstance(o.x_qr_invoice, bytes) else o.x_qr_invoice)" style="max-height:140px;"/>
+          </t>
+        </div>
+      </div>
+    </xpath>
+  </template>
+</odoo>

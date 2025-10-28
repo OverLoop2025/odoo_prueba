@@ -1,0 +1,11 @@
+<odoo>
+  <record id="exam_sale_channel_online" model="exam.sale.channel">
+    <field name="name">Online</field>
+  </record>
+  <record id="exam_sale_channel_store" model="exam.sale.channel">
+    <field name="name">Tienda</field>
+  </record>
+  <record id="exam_sale_channel_phone" model="exam.sale.channel">
+    <field name="name">Teléfono</field>
+  </record>
+</odoo>

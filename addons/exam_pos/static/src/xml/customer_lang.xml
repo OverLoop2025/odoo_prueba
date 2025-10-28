@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="exam_pos.CustomerLangPatch" owl="1">
+
+        <t t-inherit="point_of_sale.PartnerLine" t-inherit-mode="extension">
+            <xpath expr="//div[contains(@class,'partner-line')]" position="inside">
+                <t t-if="props.partner.lang">
+                    <div class="o_partner_lang" style="font-size: 12px; color: #888;">
+                        Idioma: <t t-esc="props.partner.lang"/>
+                    </div>
+                </t>
+            </xpath>
+        </t>
+
+    </t>
+
+</templates>

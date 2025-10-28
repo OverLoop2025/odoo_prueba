@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.log
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+odoo-db-data/
+odoo-web-data/
