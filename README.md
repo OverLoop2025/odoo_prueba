@@ -1,4 +1,4 @@
-# Odoo Examen 2025
+# Odoo Prueba de trabajo
 
 Este proyecto contiene la configuración completa de Odoo 16 en Docker junto con los módulos desarrollados como parte del examen práctico.  
 El entorno está preparado para que pueda ejecutarse directamente, sin necesidad de instalaciones adicionales.
